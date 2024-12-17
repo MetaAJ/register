@@ -1,0 +1,35 @@
+{
+    "description": "Island of Whispers",
+    "domain": "is-not-a.dev",
+    "subdomain": "islandofwhispers",
+
+    "owner": {
+        "repo": "https://github.com/MetaAJ",
+        "email": "ajsdevspace@gmail.com"
+    },
+
+    "record": {
+        "MX": [
+            {
+                "host": "send.islandofwhispers",
+                "value": "feedback-smtp.us-east-1.amazonses.com",
+                "priority": 10
+            }
+        ],
+        "TXT": [
+            {
+                "host": "send.islandofwhispers",
+                "value": "v=spf1 include:amazonses.com ~all"
+            },
+            {
+                "host": "resend._domainkey.islandofwhispers",
+                "value": "p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDexcTzdBzXJQwu2Z12AX9WGnGhFSqy0u1mUEAQXTglMxNAPHYcqokKBAbeHCUE3KjMj6rhWdXWyVguz4+Pakab6q8J1eE5fJPfMVUB3fghhxEtODWD+NDAz4Izupb4zl1G67N3qB8wsf8fqHnIM7mlo4Uo1N3icnB6LJbHjlWkJwIDAQAB"
+            }
+        ],
+        "CAA": [
+            { "flags": 0, "tag": "issue", "value": "letsencrypt.org" }
+        ]
+    },
+
+    "proxied": false
+}
